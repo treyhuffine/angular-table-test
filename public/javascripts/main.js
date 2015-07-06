@@ -32,14 +32,14 @@ app
   };
   $scope.addHighlight = function(colidx, rowidx) {
     if (!$scope.focus) {
-      $("." + $scope.tableKeys[colidx+1]).css({opacity: 1});
-      $("." + rowidx).css({opacity: 1});
+      angular.element(document.getElementsByClassName($scope.tableKeys[colidx+1])).css({opacity: 1});
+      angular.element(document.getElementsByClassName(rowidx)).css({opacity: 1});
     }
   };
   $scope.removeHighlight = function(colidx, rowidx) {
     if (!$scope.focus) {
-      $("." + $scope.tableKeys[colidx+1]).css({opacity: 0.75});
-      $("." + rowidx).css({opacity: 0.75});
+      angular.element(document.getElementsByClassName($scope.tableKeys[colidx+1])).css({opacity: 0.75});
+      angular.element(document.getElementsByClassName(rowidx)).css({opacity: 0.75});
     }
   };
   $scope.displayFeature = function(idx) {
@@ -48,7 +48,7 @@ app
       $scope.focus = false;
       $scope.currentFocus = null;
       for (i = 0; i < $scope.features.length; i++) {
-          $("." + i).css({opacity: 0.75});
+          angular.element(document.getElementsByClassName(i)).css({opacity: 0.75});
       }
     }
     else {
@@ -56,10 +56,10 @@ app
       $scope.currentFocus = idx;
       for (i = 0; i < $scope.features.length; i++) {
         if (i === idx) {
-          $("." + i).css({opacity: 1});
+          angular.element(document.getElementsByClassName(i)).css({opacity: 1});
         }
         else {
-          $("." + i).css({opacity: 0.2});
+          angular.element(document.getElementsByClassName(i)).css({opacity: 0.2});
         }
       }
     }
