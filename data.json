@@ -1,7 +1,7 @@
 {
   "features": [
     {
-      "Feature/Engine": "exponentiation" ,
+      "Feature/Engine": "exponentiation",
       "FF1": "Yes",
       "FF2": "Yes",
       "IE1": "No",
@@ -15,7 +15,7 @@
       "iOS2": "No"
     },
     {
-      "Feature/Engine": "function.senct" ,
+      "Feature/Engine": "function.senct",
       "FF1": "No",
       "FF2": "No",
       "IE1": "No",
@@ -29,7 +29,7 @@
       "iOS2": "No"
     },
     {
-      "Feature/Engine": "Object.observc" ,
+      "Feature/Engine": "Object.observc",
       "FF1": "No",
       "FF2": "No",
       "IE1": "No",
@@ -41,6 +41,146 @@
       "WK4": "No",
       "iOS1": "Yes",
       "iOS2": "Yes"
+    },
+    {
+      "Feature/Engine": "Array.prototype.includesc",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "Partial",
+      "IE2": "Yes",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "Partial",
+      "WK3": "No",
+      "WK4": "Yes",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "SIMD",
+      "FF1": "No",
+      "FF2": "No",
+      "IE1": "No",
+      "IE2": "No",
+      "IE3": "Yes",
+      "WK1": "Yes",
+      "WK2": "No",
+      "WK3": "Yes",
+      "WK4": "Partial",
+      "iOS1": "Partial",
+      "iOS2": "Yes"
+    },
+    {
+      "Feature/Engine": "trailing commas in function syntax",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "No",
+      "IE2": "Yes",
+      "IE3": "No",
+      "WK1": "Partial",
+      "WK2": "Partial",
+      "WK3": "Yes",
+      "WK4": "Partial",
+      "iOS1": "Partial",
+      "iOS2": "Yes"
+    },
+    {
+      "Feature/Engine": "async functions",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "Yes",
+      "IE2": "Yes",
+      "IE3": "No",
+      "WK1": "Yes",
+      "WK2": "No",
+      "WK3": "No",
+      "WK4": "Partial",
+      "iOS1": "0/2",
+      "iOS2": "Yes"
+    },
+    {
+      "Feature/Engine": "typed objectsc",
+      "FF1": "No",
+      "FF2": "No",
+      "IE1": "Partial",
+      "IE2": "No",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "No",
+      "WK3": "No",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "ArrayBuffer.transferc",
+      "FF1": "No",
+      "FF2": "No",
+      "IE1": "No",
+      "IE2": "No",
+      "IE3": "Yes",
+      "WK1": "Yes",
+      "WK2": "Yes",
+      "WK3": "Yes",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "class decoratorsc",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "No",
+      "IE2": "Partial",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "Partial",
+      "WK3": "No",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "async generatorsc",
+      "FF1": "No",
+      "FF2": "No",
+      "IE1": "No",
+      "IE2": "No",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "No",
+      "WK3": "No",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "object rest propertiesc",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "Yes",
+      "IE2": "No",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "No",
+      "WK3": "No",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
+    },
+    {
+      "Feature/Engine": "object spread propertiesc",
+      "FF1": "No",
+      "FF2": "Yes",
+      "IE1": "Yes",
+      "IE2": "No",
+      "IE3": "No",
+      "WK1": "No",
+      "WK2": "No",
+      "WK3": "No",
+      "WK4": "No",
+      "iOS1": "No",
+      "iOS2": "No"
     }
   ]
 }

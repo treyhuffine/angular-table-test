@@ -27,6 +27,6 @@ app
       "no": "red",
       "partial": "orange"
     };
-    return featureTable[value];
+    return featureTable[value] || "red";
   };
 });
