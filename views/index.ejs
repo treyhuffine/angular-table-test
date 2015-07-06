@@ -20,52 +20,52 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="trow" ng-repeat="feature in features track by $index">
+        <tr class="trow" ng-repeat="feature in features track by $index" class="$index">
           <td>
             {{feature["Feature/Engine"]}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.FF1)}"
-              class="FF1" ng-mouseenter="addHighlight(0)" ng-mouseleave="removeHighlight(0)">
+              class="FF1 {{$index}}" ng-mouseenter="addHighlight(0, $index)" ng-mouseleave="removeHighlight(0, $index)">
             {{feature.FF1}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.FF2)}"
-              class="FF2" ng-mouseenter="addHighlight(1)" ng-mouseleave="removeHighlight(1)">
+              class="FF2 {{$index}}" ng-mouseenter="addHighlight(1, $index)" ng-mouseleave="removeHighlight(1, $index)">
             {{feature.FF2}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.IE1)}"
-              class="IE1" ng-mouseenter="addHighlight(2)" ng-mouseleave="removeHighlight(2)">
+              class="IE1 {{$index}}" ng-mouseenter="addHighlight(2, $index)" ng-mouseleave="removeHighlight(2, $index)">
             {{feature.IE1}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.IE2)}"
-              class="IE2" ng-mouseenter="addHighlight(3)" ng-mouseleave="removeHighlight(3)">
+              class="IE2 {{$index}}" ng-mouseenter="addHighlight(3, $index)" ng-mouseleave="removeHighlight(3, $index)">
             {{feature.IE2}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.IE3)}"
-              class="IE3" ng-mouseenter="addHighlight(4)" ng-mouseleave="removeHighlight(4)">
+              class="IE3 {{$index}}" ng-mouseenter="addHighlight(4, $index)" ng-mouseleave="removeHighlight(4, $index)">
             {{feature.IE3}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.WK1)}"
-              class="WK1" ng-mouseenter="addHighlight(5)" ng-mouseleave="removeHighlight(5)">
+              class="WK1 {{$index}}" ng-mouseenter="addHighlight(5, $index)" ng-mouseleave="removeHighlight(5, $index)">
             {{feature.WK1}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.WK2)}"
-              class="WK2" ng-mouseenter="addHighlight(6)" ng-mouseleave="removeHighlight(6)">
+              class="WK2 {{$index}}" ng-mouseenter="addHighlight(6, $index)" ng-mouseleave="removeHighlight(6, $index)">
             {{feature.WK2}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.WK3)}"
-              class="WK3" ng-mouseenter="addHighlight(7)" ng-mouseleave="removeHighlight(7)">
+              class="WK3 {{$index}}" ng-mouseenter="addHighlight(7, $index)" ng-mouseleave="removeHighlight(7, $index)">
             {{feature.WK3}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.WK4)}"
-              class="WK4" ng-mouseenter="addHighlight(8)" ng-mouseleave="removeHighlight(8)">
+              class="WK4 {{$index}}" ng-mouseenter="addHighlight(8, $index)" ng-mouseleave="removeHighlight(8, $index)">
             {{feature.WK4}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.iOS1)}"
-              class="iOS1" ng-mouseenter="addHighlight(9)" ng-mouseleave="removeHighlight(9)">
+              class="iOS1 {{$index}}" ng-mouseenter="addHighlight(9, $index)" ng-mouseleave="removeHighlight(9, $index)">
             {{feature.iOS1}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.iOS2)}"
-              class="iOS2" ng-mouseenter="addHighlight(10)" ng-mouseleave="removeHighlight(10)">
+              class="iOS2 {{$index}}" ng-mouseenter="addHighlight(10, $index)" ng-mouseleave="removeHighlight(10, $index)">
             {{feature.iOS2}}
           </td>
         </tr>

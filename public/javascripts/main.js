@@ -29,10 +29,12 @@ app
     };
     return featureTable[value] || "rgb(210, 109, 109)";
   };
-  $scope.addHighlight = function(idx) {
-    $("." + $scope.tableKeys[idx+1]).css({opacity: 1});
+  $scope.addHighlight = function(colidx, rowidx) {
+    $("." + $scope.tableKeys[colidx+1]).css({opacity: 1});
+    $("." + rowidx).css({opacity: 1});
   };
-  $scope.removeHighlight = function(idx) {
-    $("." + $scope.tableKeys[idx+1]).css({opacity: 0.75});
+  $scope.removeHighlight = function(colidx, rowidx) {
+    $("." + $scope.tableKeys[colidx+1]).css({opacity: 0.75});
+    $("." + rowidx).css({opacity: 0.75});
   };
 });

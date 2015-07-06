@@ -15,6 +15,9 @@ th, td {
 .FF1, .FF2, .IE1, .IE2, .IE3, .WK1, .WK2, .WK3, .WK4, .iOS1, .iOS2 {
   opacity: .75;
 }
+.0, .1, .2, .3, .4, .5, .6, .7, .8. .9, .10 {
+  opacity: .75;
+}
 h3 {
   margin-top: 0 !important;
 }
