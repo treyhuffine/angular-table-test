@@ -23,10 +23,16 @@ app
   $scope.checkFeature = function(value) {
     value = value.toLowerCase();
     var featureTable = {
-      "yes": "green",
-      "no": "red",
-      "partial": "orange"
+      "yes": "rgb(104, 201, 116)",
+      "no": "rgb(210, 109, 109)",
+      "partial": "rgb(242, 171, 64)"
     };
-    return featureTable[value] || "red";
+    return featureTable[value] || "rgb(210, 109, 109)";
+  };
+  $scope.addHighlight = function(idx) {
+    $("." + $scope.tableKeys[idx+1]).css({opacity: 1});
+  };
+  $scope.removeHighlight = function(idx) {
+    $("." + $scope.tableKeys[idx+1]).css({opacity: 0.75});
   };
 });

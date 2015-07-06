@@ -9,6 +9,12 @@ a {
 table {
   border-top: 1px solid rgb(197, 198, 198);
 }
-td, th {
-  border: 1px solid rgb(197, 198, 198);
+th, td {
+  border: 1px solid rgb(197, 198, 198) !important;
+}
+.FF1, .FF2, .IE1, .IE2, .IE3, .WK1, .WK2, .WK3, .WK4, .iOS1, .iOS2 {
+  opacity: .75;
+}
+h3 {
+  margin-top: 0 !important;
 }

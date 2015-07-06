@@ -3,13 +3,14 @@
   <head>
     <title>Angular Table</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="/javascripts/main.js"></script>
   </head>
   <body ng-controller="MainCtrl">
+    <h3 class="text-center">Feature Compatability</h3>
     <table class="table">
       <thead>
         <tr>
@@ -19,41 +20,52 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="feature in features">
+        <tr class="trow" ng-repeat="feature in features track by $index">
           <td>
             {{feature["Feature/Engine"]}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.FF1)}">
+          <td ng-style="{'background-color': checkFeature(feature.FF1)}"
+              class="FF1" ng-mouseenter="addHighlight(0)" ng-mouseleave="removeHighlight(0)">
             {{feature.FF1}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.FF2)}">
+          <td ng-style="{'background-color': checkFeature(feature.FF2)}"
+              class="FF2" ng-mouseenter="addHighlight(1)" ng-mouseleave="removeHighlight(1)">
             {{feature.FF2}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.IE1)}">
+          <td ng-style="{'background-color': checkFeature(feature.IE1)}"
+              class="IE1" ng-mouseenter="addHighlight(2)" ng-mouseleave="removeHighlight(2)">
             {{feature.IE1}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.IE2)}">
+          <td ng-style="{'background-color': checkFeature(feature.IE2)}"
+              class="IE2" ng-mouseenter="addHighlight(3)" ng-mouseleave="removeHighlight(3)">
             {{feature.IE2}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.IE3)}">
+          <td ng-style="{'background-color': checkFeature(feature.IE3)}"
+              class="IE3" ng-mouseenter="addHighlight(4)" ng-mouseleave="removeHighlight(4)">
             {{feature.IE3}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.WK1)}">
+          <td ng-style="{'background-color': checkFeature(feature.WK1)}"
+              class="WK1" ng-mouseenter="addHighlight(5)" ng-mouseleave="removeHighlight(5)">
             {{feature.WK1}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.WK2)}">
+          <td ng-style="{'background-color': checkFeature(feature.WK2)}"
+              class="WK2" ng-mouseenter="addHighlight(6)" ng-mouseleave="removeHighlight(6)">
             {{feature.WK2}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.WK3)}">
+          <td ng-style="{'background-color': checkFeature(feature.WK3)}"
+              class="WK3" ng-mouseenter="addHighlight(7)" ng-mouseleave="removeHighlight(7)">
             {{feature.WK3}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.WK4)}">
+          <td ng-style="{'background-color': checkFeature(feature.WK4)}"
+              class="WK4" ng-mouseenter="addHighlight(8)" ng-mouseleave="removeHighlight(8)">
             {{feature.WK4}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.iOS1)}">
+          <td ng-style="{'background-color': checkFeature(feature.iOS1)}"
+              class="iOS1" ng-mouseenter="addHighlight(9)" ng-mouseleave="removeHighlight(9)">
             {{feature.iOS1}}
           </td>
-          <td ng-style="{'background-color': checkFeature(feature.iOS2)}">
+          <td ng-style="{'background-color': checkFeature(feature.iOS2)}"
+              class="iOS2" ng-mouseenter="addHighlight(10)" ng-mouseleave="removeHighlight(10)">
             {{feature.iOS2}}
           </td>
         </tr>
