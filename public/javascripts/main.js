@@ -10,12 +10,13 @@ app
   };
 })
 .controller('MainCtrl', function($scope, Feature) {
+  $scope.focus = false;
+  $scope.currentFocus = null;
+
   Feature.getFeatures()
     .success(function(data) {
-      console.log(data);
       $scope.features = data;
       $scope.tableKeys = Object.keys(data[0]);
-      console.log($scope.feaures);
     })
     .catch(function(err) {
       console.log(err);
@@ -30,20 +31,36 @@ app
     return featureTable[value] || "rgb(210, 109, 109)";
   };
   $scope.addHighlight = function(colidx, rowidx) {
-    $("." + $scope.tableKeys[colidx+1]).css({opacity: 1});
-    $("." + rowidx).css({opacity: 1});
+    if (!$scope.focus) {
+      $("." + $scope.tableKeys[colidx+1]).css({opacity: 1});
+      $("." + rowidx).css({opacity: 1});
+    }
   };
   $scope.removeHighlight = function(colidx, rowidx) {
-    $("." + $scope.tableKeys[colidx+1]).css({opacity: 0.75});
-    $("." + rowidx).css({opacity: 0.75});
+    if (!$scope.focus) {
+      $("." + $scope.tableKeys[colidx+1]).css({opacity: 0.75});
+      $("." + rowidx).css({opacity: 0.75});
+    }
   };
   $scope.displayFeature = function(idx) {
-    for (var i = 0; i < $scope.features.length; i++) {
-      if (i === idx) {
-        $("." + i).css({opacity: 1});
+    var i;
+    if ($scope.currentFocus === idx) {
+      $scope.focus = false;
+      $scope.currentFocus = null;
+      for (i = 0; i < $scope.features.length; i++) {
+          $("." + i).css({opacity: 0.75});
       }
-      else {
-        $("." + i).css({opacity: 0.2});
+    }
+    else {
+      $scope.focus = true;
+      $scope.currentFocus = idx;
+      for (i = 0; i < $scope.features.length; i++) {
+        if (i === idx) {
+          $("." + i).css({opacity: 1});
+        }
+        else {
+          $("." + i).css({opacity: 0.2});
+        }
       }
     }
   };
