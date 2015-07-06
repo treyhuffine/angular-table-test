@@ -37,4 +37,14 @@ app
     $("." + $scope.tableKeys[colidx+1]).css({opacity: 0.75});
     $("." + rowidx).css({opacity: 0.75});
   };
+  $scope.displayFeature = function(idx) {
+    for (var i = 0; i < $scope.features.length; i++) {
+      if (i === idx) {
+        $("." + i).css({opacity: 1});
+      }
+      else {
+        $("." + i).css({opacity: 0.2});
+      }
+    }
+  };
 });

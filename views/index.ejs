@@ -21,7 +21,7 @@
       </thead>
       <tbody>
         <tr class="trow" ng-repeat="feature in features track by $index" class="$index">
-          <td>
+          <td class="feature-title" ng-click="displayFeature($index)">
             {{feature["Feature/Engine"]}}
           </td>
           <td ng-style="{'background-color': checkFeature(feature.FF1)}"

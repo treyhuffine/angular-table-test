@@ -21,3 +21,6 @@ th, td {
 h3 {
   margin-top: 0 !important;
 }
+.feature-title {
+  cursor:  pointer;
+}
