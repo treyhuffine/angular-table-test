@@ -4,9 +4,60 @@
     <title>Angular Table</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="/javascripts/main.js"></script>
   </head>
   <body ng-controller="MainCtrl">
-    {{features}}
+    <table class="table">
+      <thead>
+        <tr>
+          <th ng-repeat="key in tableKeys">
+            {{key}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="feature in features">
+          <td>
+            {{feature["Feature/Engine"]}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.FF1)}">
+            {{feature.FF1}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.FF2)}">
+            {{feature.FF2}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.IE1)}">
+            {{feature.IE1}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.IE2)}">
+            {{feature.IE2}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.IE3)}">
+            {{feature.IE3}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.WK1)}">
+            {{feature.WK1}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.WK2)}">
+            {{feature.WK2}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.WK3)}">
+            {{feature.WK3}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.WK4)}">
+            {{feature.WK4}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.iOS1)}">
+            {{feature.iOS1}}
+          </td>
+          <td ng-style="{'background-color': checkFeature(feature.iOS2)}">
+            {{feature.iOS2}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>

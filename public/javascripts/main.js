@@ -10,14 +10,23 @@ app
   };
 })
 .controller('MainCtrl', function($scope, Feature) {
-  $scope.hello = "Hello WOOORLD!";
   Feature.getFeatures()
     .success(function(data) {
       console.log(data);
       $scope.features = data;
+      $scope.tableKeys = Object.keys(data[0]);
       console.log($scope.feaures);
     })
     .catch(function(err) {
       console.log(err);
     });
+  $scope.checkFeature = function(value) {
+    value = value.toLowerCase();
+    var featureTable = {
+      "yes": "green",
+      "no": "red",
+      "partial": "orange"
+    };
+    return featureTable[value];
+  };
 });
